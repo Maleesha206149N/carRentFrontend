@@ -1,0 +1,18 @@
+<!-- vehicle-details.component.html -->
+<div class="vehicle-list">
+    <div *ngFor="let vehicle of vehicles" class="vehicle-card">
+      <mat-card>
+        <img mat-card-image [src]="vehicle.imageData" alt="{{ vehicle.brand }} {{ vehicle.model }}">
+        <mat-card-content>
+          <h3>{{ vehicle.model }} {{ vehicle.brand }}</h3>
+          <p>Daily Rate: {{ vehicle.dailyRate }}LKR</p>
+          <p>Location: {{ vehicle.location }}</p>
+          <p>Contact No: {{ vehicle.contactNo }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button *ngIf="vehicle.isAvailable === 'true'" mat-button color="primary" (click)="bookVehicle(vehicle.id)">Book Now</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  

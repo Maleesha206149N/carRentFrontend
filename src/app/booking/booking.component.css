@@ -1,0 +1,57 @@
+/* vehicle-details.component.css */
+
+/* Container for the vehicle cards */
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+margin-bottom: 100px;
+margin-top: 200px;
+  }
+  
+  /* Styling for each vehicle card */
+  .vehicle-card {
+    margin: 15px;
+    border-radius: 10px; /* Add border radius for a rounded look */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  .vehicle-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+  }
+  
+  /* Styling for the material card */
+  mat-card {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  /* Styling for card content */
+  mat-card-content {
+    padding: 15px;
+  }
+  
+  /* Styling for card actions (buttons) */
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+  
+  /* Styling for the book now button */
+  mat-card-actions button {
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Add padding to the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  mat-card-actions button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  

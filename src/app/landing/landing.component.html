@@ -1,0 +1,47 @@
+<div class="landing-page">
+    <div class="hero">
+        <h2>Welcome to DriveEase</h2>
+        <p>Explore a world of incredible features and top-notch services that can transform your home.</p>
+        <ng-container *ngIf="!authToken">
+            <a class="cta-button" (click)="openRegistrationDialog()">Get Started</a>
+          </ng-container>
+    </div>
+   <!-- src/app/why-choose-us/why-choose-us.component.html -->
+   <div class="features">
+        <h3>Why Choose Us?</h3>
+        <div class="choose-us-card" *ngFor="let feature of features">
+            <mat-icon>{{ feature.icon }}</mat-icon>
+            <p class="choose-us-description">{{ feature.description }}</p>
+        </div>
+
+   </div>
+
+
+    
+    
+    <div class="testimonials">
+        <h3>What Our Customers Say</h3>
+        <div class="testimonial">
+            <img src="../../../assets/cust1.png" alt="Customer 1">
+            <p>"I was impressed by the efficiency of FixMasters. Their technicians arrived on time and completed the repair quickly. Highly recommended!"</p>
+            <cite>- John Smith - CEO-ABC(pvt) ltd</cite>
+        </div>
+        <div class="testimonial">
+            <img src="../../../assets/cust2.png" alt="Customer 2">
+            <p>"The service provided by FixMasters was exceptional. The technician was knowledgeable and courteous. I'll definitely use them again."
+            </p>
+            <cite>- Sarah Johnson - Teacher</cite>
+        </div>
+    </div>
+    <div class="cta">
+        <h2>Ready to get started?</h2>
+        <p>Join us today and experience the future!</p>
+        <ng-container *ngIf="!authToken">
+            <a class="cta-button" (click)="openRegistrationDialog()">Get Started</a>
+          </ng-container>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 Your Brand. All rights reserved.</p>
+    </footer>
+</div>
+<router-outlet></router-outlet>

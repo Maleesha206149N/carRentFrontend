@@ -1,0 +1,17 @@
+<header class="header">
+    <div class="logo">
+        <img src="../../../assets/logo.png" alt="Your Brand Logo" width="200" height="200" style="margin-top: -15px;">
+        <h1>DriveEase</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a routerLink="/">Home</a></li>
+            <li *ngIf="isAuthenticated"><a>My Profile</a></li>
+            <li *ngIf="isAuthenticated"><a routerLink="/booking-list">Bookings</a></li>
+            <li *ngIf="isAuthenticated"><a routerLink="/yard">Vehicle Yard </a></li>
+            <li *ngIf="isAuthenticated && isCarRenter"><a (click)="openVehicleAddDialog()">Add Vehicle</a></li>
+            <li *ngIf="isAuthenticated"><a routerLink="/get-started">Help</a></li>
+            <li *ngIf="isAuthenticated"><a (click)="logout()" style="color: rgb(236, 77, 77);">Logout</a></li>
+        </ul>
+    </nav>
+  </header>

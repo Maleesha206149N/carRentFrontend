@@ -1,0 +1,56 @@
+<!-- src/app/registration/registration.component.html -->
+    <div class="card">
+        <h2 class="card-header text-center">{{ isRegistration ? 'Sign Up' : 'Login' }}</h2>
+        <div class="card-body">
+            <form *ngIf="isRegistration" (ngSubmit)="register()" #registrationForm="ngForm" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" id="username" name="username" [(ngModel)]="user.username" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="role" class="form-label">Role:</label>
+                    <select id="role" name="role" [(ngModel)]="user.role" class="form-select" required>
+                        <option value="Customer">Customer</option>
+                        <option value="CarRenter">Car Renter</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="nic" class="form-label">NIC:</label>
+                    <input type="text" id="nic" name="nic" [(ngModel)]="user.nic" class="form-control" required>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">Register</button>
+                </div>
+            </form>
+            <form *ngIf="!isRegistration" (ngSubmit)="login()" #loginForm="ngForm" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="loginUsername" class="form-label">Username:</label>
+                    <input type="text" id="loginUsername" name="username" [(ngModel)]="loginUser.username"  class="form-control" required>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password:</label>
+                    <input type="password" id="loginPassword" name="password" [(ngModel)]="loginUser.password" class="form-control" required>
+                </div>
+            
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+                </div>
+            </form>
+            
+    
+            <p class="text-center mt-3">
+                {{ isRegistration ? "Already have an account? " : "Don't have an account? " }}
+                <a href="#" (click)="toggleMode($event)"> {{ isRegistration ? 'Sign In' : 'Register' }}</a>
+            </p>
+        </div>
+    </div>
+

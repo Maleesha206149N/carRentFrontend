@@ -1,0 +1,25 @@
+<div class="table-container">
+    <table class="booking-table">
+      <thead>
+        <tr>
+          <th>Vehicle ID</th>
+          <th>Name</th>
+          <th>Mobile Number</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <!-- Add more columns as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.id }}</td>
+          <td>{{ booking.name }}</td>
+          <td>{{ booking.mobileNo }}</td>
+          <td>{{ booking.startDate | date }}</td>
+          <td>{{ booking.endDate | date }}</td>
+          <!-- Add more columns as needed -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
