@@ -55,6 +55,7 @@ export class AppointmentsComponent {
     );
   }
 
+  //Show success
   showSuccessSnackbar(message: string) {
     this.snackBar.open(message, 'Close', {
       duration: 3000,
