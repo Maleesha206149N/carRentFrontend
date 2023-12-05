@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
   templateUrl: './appointments.component.html',
   styleUrls: ['./appointments.component.css']
 })
+
+//Appoinments Component 
 export class AppointmentsComponent {
   @ViewChild('bookingForm') bookingForm!: NgForm;
 
