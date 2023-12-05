@@ -19,6 +19,7 @@ export class BookingComponent implements OnInit {
     });
   }
 
+  //booking a vehicle
   bookVehicle(vehicleId: string): void {
     const dialogRef = this.matDialog.open(AppointmentsComponent, {
       width: '500px',
