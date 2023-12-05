@@ -8,6 +8,7 @@ import { AppointmentsComponent } from '../appointments/appointments.component';
   templateUrl: './booking.component.html',
   styleUrls: ['./booking.component.css']
 })
+//vehicle yard function
 export class BookingComponent implements OnInit {
   vehicles: any[] = [];
 
