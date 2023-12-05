@@ -8,6 +8,7 @@ import { RegisterComponent } from '../register/register.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+// Home Component 
 export class HomeComponent {
   constructor(public dialog: MatDialog, private router: Router) {}
   features = [
