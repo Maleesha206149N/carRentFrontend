@@ -62,7 +62,7 @@ export class AppointmentsComponent {
   }
   
   
-  
+  //Show error
   showErrorSnackbar(message: string) {
     this.snackBar.open(message, 'Close', {
       duration: 3000,
