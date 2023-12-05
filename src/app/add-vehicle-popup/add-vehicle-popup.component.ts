@@ -9,6 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './add-vehicle-popup.component.html',
   styleUrls: ['./add-vehicle-popup.component.css']
 })
+//Add vehicle popup component 
 export class AddVehiclePopupComponent {
   public imageData: string | null = null;
   car: any = {};
@@ -16,7 +17,7 @@ export class AddVehiclePopupComponent {
   constructor(private dataService: DataService, private toastr: ToastrService, private cdr: ChangeDetectorRef,private snackBar: MatSnackBar,) { }
 
   onSubmit() {
-    // Set the image data before submitting
+    // Set the image data previous submitting
     this.car.imageData = this.imageData;
     this.car.Id = '';
 
@@ -33,7 +34,7 @@ export class AddVehiclePopupComponent {
       }
     );
   }
-
+  
   onFileSelected(event: any): void {
     const file: File = event.target.files[0];
     const reader = new FileReader();
