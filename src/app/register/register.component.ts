@@ -8,8 +8,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+//User registration component
 export class RegisterComponent {
+
   isRegistration: boolean = true;
+  //User model map
   user: any = {
     username: '',
     password: '',
@@ -25,6 +28,7 @@ export class RegisterComponent {
   
   constructor(private registrationService: DataService, private router: Router,private snackBar: MatSnackBar) { }
 
+  //User registration function
   register() {
     debugger;
     this.registrationService.register(this.user).subscribe(
@@ -39,6 +43,7 @@ export class RegisterComponent {
     );
   }
 
+  //User login button function
   login() {
     this.registrationService.login(this.loginUser).subscribe(
       response => {
@@ -64,7 +69,7 @@ export class RegisterComponent {
     );
   }
 
-// Function to decode the JWT token
+// Method to decode the JWT token
 decodeToken(token: string): any {
     const base64Url = token.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -82,6 +87,7 @@ decodeToken(token: string): any {
   resetForm() {
     this.user= {};
   }
+  //Success message toastr
   showSuccessSnackbar(message: string) {
     this.snackBar.open(message, 'Close', {
       duration: 3000,
