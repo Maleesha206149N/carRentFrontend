@@ -6,6 +6,7 @@ import { DataService } from '../Services/dataService';
   templateUrl: './booking-list.component.html',
   styleUrls: ['./booking-list.component.css']
 })
+//Booking list component
 export class BookingListComponent {
   bookings: any[] = [];
 
