@@ -43,7 +43,7 @@ export class RegisterComponent {
     );
   }
 
-  //User login button function
+  //User login button function for DriveEase
   login() {
     this.registrationService.login(this.loginUser).subscribe(
       response => {
