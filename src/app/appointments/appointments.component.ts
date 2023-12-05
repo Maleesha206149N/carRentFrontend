@@ -4,7 +4,6 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgForm } from '@angular/forms';
 
-//Appointment
 @Component({
   selector: 'app-appointments',
   templateUrl: './appointments.component.html',
@@ -53,7 +52,6 @@ export class AppointmentsComponent {
     );
   }
 
-  //Show success
   showSuccessSnackbar(message: string) {
     this.snackBar.open(message, 'Close', {
       duration: 3000,
@@ -62,7 +60,7 @@ export class AppointmentsComponent {
   }
   
   
-  //Show error
+  
   showErrorSnackbar(message: string) {
     this.snackBar.open(message, 'Close', {
       duration: 3000,
