@@ -4,6 +4,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgForm } from '@angular/forms';
 
+//Appointment
 @Component({
   selector: 'app-appointments',
   templateUrl: './appointments.component.html',
