@@ -9,6 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './add-vehicle-popup.component.html',
   styleUrls: ['./add-vehicle-popup.component.css']
 })
+//Add vehicle popup component 
 export class AddVehiclePopupComponent {
   public imageData: string | null = null;
   car: any = {};
