@@ -96,7 +96,7 @@ decodeToken(token: string): any {
   }
   
   
-  
+  //Error message toastr
   showErrorSnackbar(message: string) {
     this.snackBar.open(message, 'Close', {
       duration: 3000,
