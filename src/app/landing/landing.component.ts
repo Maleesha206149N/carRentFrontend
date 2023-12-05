@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
+//landing page component
 export class LandingComponent implements OnInit {
   authToken: string | null = null;
   constructor(public dialog: MatDialog, private router: Router) {}
