@@ -8,6 +8,11 @@ import { AppointmentsComponent } from '../appointments/appointments.component';
   templateUrl: './booking.component.html',
   styleUrls: ['./booking.component.css']
 })
+
+//vehicle yard function
+
+//Vehicle Yard Componant 
+
 export class BookingComponent implements OnInit {
   vehicles: any[] = [];
 
@@ -20,6 +25,7 @@ export class BookingComponent implements OnInit {
   }
 
   //booking a vehicle
+
   bookVehicle(vehicleId: string): void {
     const dialogRef = this.matDialog.open(AppointmentsComponent, {
       width: '500px',
