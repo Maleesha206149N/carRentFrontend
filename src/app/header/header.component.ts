@@ -8,6 +8,7 @@ import { AddVehiclePopupComponent } from '../add-vehicle-popup/add-vehicle-popup
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+//header component
 export class HeaderComponent {
   isAuthenticated: boolean = false;
   isCarRenter: boolean = false; // New property to check if the user is a CarRenter
@@ -28,6 +29,7 @@ export class HeaderComponent {
     }
   }
 
+  //logout button function
   logout() {
     console.log('Logout button clicked');
     localStorage.removeItem('authToken');
@@ -35,7 +37,7 @@ export class HeaderComponent {
     window.location.reload();
   }
 
-  // Function to decode the JWT token
+  // method to decode the JWT token
   decodeToken(token: string): any {
     const base64Url = token.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');

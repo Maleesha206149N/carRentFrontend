@@ -8,7 +8,10 @@ import { RegisterComponent } from '../register/register.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 // Home Component 
+//car rent app home component
+
 export class HomeComponent {
   constructor(public dialog: MatDialog, private router: Router) {}
   features = [
@@ -21,6 +24,7 @@ export class HomeComponent {
     { icon: 'emoji_transportation', description: 'Unlimited Mileage for complete freedom' },
     { icon: 'thumb_up', description: 'Trusted positive reviews by our customers' }
   ];
+  //singup button function
   openRegistrationDialog(): void {
     const dialogRef = this.dialog.open(RegisterComponent, {
       width: '400px',
