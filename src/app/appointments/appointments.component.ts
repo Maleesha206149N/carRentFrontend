@@ -39,7 +39,7 @@ export class AppointmentsComponent {
       carId: this.data.vehicleId
     };
 
-    // Call the saveBooking method in DataService
+    // Call the saveBooking funtion in DataService
     this.dataService.saveBooking(bookingData).subscribe(
       (response) => {
         // Handle success if needed
